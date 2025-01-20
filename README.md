@@ -16,7 +16,7 @@ Open the Project in VSCode
 
 
 1. Open the cloned repository folder.
-2. Navigate to the public folder.
+2. Navigate to the views folder.
 3. Right-click in an empty space and select "Open with Code".
 4. This will open the project in VSCode.
 
