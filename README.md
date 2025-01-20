@@ -9,7 +9,7 @@ To get started, clone the repository using the following command:
 
 
 bash
-git clone https://github.com/your-username/your-repo-name.git
+"git clone https://github.com/FinnGits/travel-bliss.git"
 
 
 Open the Project in VSCode
