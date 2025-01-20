@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelBliss</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Bree+Serif&family=Handlee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/main_page.css">
+</head>
+<body>
+    
+    <!-- 
+    1. Navbar:
+        - Sticky at the top
+        - Links:
+            - Home ("#")
+            - About ("#about")
+            - Blogs ("#blogs")
+            - Search ("#search")
+            - Contact ("#contact")
+        - Optional: Brand logo on the left
+        - Responsive:
+            - On small screens, collapses into hamburger menu
+    -->
+    <header class="sticky">
+        <nav class="navbar">
+            <div class="nav-item" id="title">
+                <img src="../public/img/weblogo.jpg" alt="">
+                <div>Travel Bliss</div>
+            </div>
+            <div class="nav-item" id="links">
+                <ul>
+                    <li><a href="#home-section">Home</a></li>
+                    <li><a href="#about-site-section">Our Goals</a></li>
+                    <li><a href="#blogs-section">Blogs</a></li>
+                    <li><a href="#about-section">About</a></li>
+                    <li><a href="#contact-section">Contacts</a></li>
+                </ul>
+            </div>
+            <div class="nav-item" id="signup">
+                <button>Sign up</button>
+                <button>Login</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 
+    2. Welcome Section (Hero Section):
+        - Full-screen background image (or gradient)
+        - Title: "Welcome to [Your Blog Name]!"
+        - Subtitle: "Your journey to the world's wonders starts here."
+    -->
+    <section id="home-section">
+        <div class="image-wrapper">
+            <img src="../public/img/welcom-bg.jpg" alt="Welcome Background">
+            <div class="overlay"></div>
+        </div>
+        <div class="content">
+            <h1>Welcome to TravelBliss!</h1>
+            <p>Your journey to the world's wonders starts here.</p>
+        </div>
+    </section>
+    
+    <!-- 
+    3. About the Site Section:
+        - Title: "About the Site"
+        - Short Description: "Discover amazing travel destinations, tips, and experiences."
+        - Optional: Small image/icon illustrating the theme (e.g., a suitcase, globe, etc.)
+    -->
+    <section id="about-site-section">
+        <h1 style="font-size: 2rem;">About TravelBliss</h1>
+        <div class="card">
+            <div class="card-image"><img src="../public/img/about-site-1.jpg" alt="Share Your Experiences"></div>
+            <div class="card-text">
+                <h3>Destination Guides</h3>
+                <p>Expert tips and insights to explore new places like a local. Find hidden gems and plan your trips with ease.</p>
+            </div>
+        </div>
+        <div class="card card-reverse">
+            <div class="card-image"><img src="../public/img/about-site-2.jpg" alt="Inspiring Stories"></div>
+            <div class="card-text">
+                <h3>Inspiring Stories</h3>
+                <p>Read personal accounts of adventures, culture, and discoveries from travelers around the world.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image"><img src="../public/img/about-site-3.jpg" alt="Share Your Experiences"></div>
+            <div class="card-text">
+                <h3>Share Your Experiences</h3>
+                <p>Manage your own travel blogs and inspire others with your unique journey.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+    4. Actions Section (Key Actions):
+        - Grid or flexbox layout
+        - Action Cards (3 cards with actions):
+            - Card 1: "View Blogs"
+            - When clicked, redirects to "/blogs" page
+            - The "/blogs" page displays:
+                - A list/grid of all blogs
+                - A search bar to search blogs by title, tags, or content
+                - Filters (e.g., by category, region, or blog type)
+                - Sorting options (e.g., by date, popularity, or alphabetical order)
+                
+            - Card 2: "Manage Your Blogs" (For Blog Creators)
+            - When clicked, redirects to "/manage-blogs" page
+            - The "/manage-blogs" page allows creators to:
+                - Create new blogs (form for title, content, images, tags, etc.)
+                - Edit existing blogs (list of existing blogs with edit buttons)
+                - Delete blogs (optional, with confirmation)
+
+            - Card 3: "Get Inspired" (Random Blog)
+            - When clicked, redirects to a random blog page (e.g., "/blog/:random_id")
+            - Randomly selects a blog from the database and displays it
+    -->
+    <section id="blogs-section">
+        <div class="background-wrapper">
+            <div class="overlay"></div>
+        </div>
+        <div class="content-wrapper">
+            <h1>Key Actions</h1>
+            <div class="action-cards">
+                <div class="action-card">
+                    <h3>View Blogs</h3>
+                    <p>Explore a variety of blogs on travel destinations, experiences, and tips!</p>
+                    <a href="./blog.html" class="action-btn">Go to Blogs</a>
+                </div>
+                <div class="action-card">
+                    <h3>Manage Your Blogs</h3>
+                    <p>Write, edit, and manage your travel blogs. Share your stories with the world.</p>
+                    <a href="./manage.html" class="action-btn">Manage Blogs</a>
+                </div>
+                <div class="action-card">
+                    <h3>Get Inspired</h3>
+                    <p>Feel like discovering something new? Read a random blog to spark your wanderlust.</p>
+                    <a href="./random.html" class="action-btn">Get Inspired</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+    5. About Section (More Details):
+        - Title: "Our Story" or "More About Us"
+        - Description: "Our mission is to inspire wanderlust through stories and guides."
+    -->
+    <section id="about-section"> 
+        <div class="left">
+            <img src="../public/img/mine.jpg" alt="mine.jpg">
+        </div>
+        <div class="right">
+            <h1>Our Story</h1>
+            <p>Our mission is to inspire wanderlust through stories and guides, helping you explore new places with ease and excitement.</p>
+            <p>We believe travel is about connecting with people, discovering new experiences, and creating lasting memories.</p>
+            <p>Whether it's a bustling city or a serene hidden spot, we're here to share the best destinations and experiences with you.</p>
+            <p>Our team is a passionate group of travelers, always looking for new places to explore and stories to tell.</p>
+            <p>We want to make your journey smoother, sharing tips and insights that make each trip more meaningful.</p>
+            <p>Join us on our adventure and discover the world through our eyes, one story at a time.</p>
+            <button>Read More</button>
+        </div>
+    </section>
+    
+    <!-- 
+    6. Contact Section:
+        - Title: "Contact Us"
+        - ContactForm:
+            - Name input field
+            - Email input field
+            - Message text area
+            - Submit button: "Send Message"
+            - On form submission, send the data to a backend or email service
+        - Alternative Contact Methods:
+            - Email: "contact@yourblog.com"
+            - Phone: "+1 234 567 890"
+        - Optional: Display map (e.g., embedded Google Maps)
+    -->
+    <section id="contact-section">
+        <div class="background"></div>
+        <div class="overlay"></div>
+        <div class="content">
+            <div id="contact-left">
+                <form action="">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name..">
+                    <label for="email" >Email</label>
+                    <input type="email" id="email" name="email" placeholder="**example@gmail.com**" required>
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="**Write something..**" style="height:200px" required></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div id="contact-right">
+                <div><h1>Our Contacts</h1></div>
+                <div id="contact-given">
+                    <p class="contact-given-item"><strong>Email : </strong><a data-copy="example@gmail.com" onclick="copyToClipboard(event)">example@gmail.com</a></p>
+                    <p class="contact-given-item"><strong>Phone : </strong><a data-copy="0123456789" onclick="copyToClipboard(event)">0123456789</a></p>
+                    <p class="contact-given-item"><strong>Location : </strong><a data-copy="gReAtEsT cOlLeGe" onclick="copyToClipboard(event)">gReAtEsT cOlLeGe</a></p>
+                    <p class="contact-given-item"><strong>Thing : </strong><a data-copy="content" onclick="copyToClipboard(event)">content</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+    7. Footer:
+        - Social Media Links:
+            - Instagram, Twitter, Facebook, YouTube (links/icons)
+        - Copyright Notice: "© 2025 Travel Blog. All rights reserved."
+        - Links to Privacy Policy and Terms of Service
+        - Optional: Sticky footer on mobile for easier access
+    -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section social-media">
+                <h3>Follow Us</h3>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon"><img src="../public/icons/instagram.png" alt="Instagram"></a>
+                <a href="https://www.twitter.com" target="_blank" class="social-icon"><img src="../public/icons/twitter.png" alt="Twitter"></a>
+                <a href="https://www.facebook.com" target="_blank" class="social-icon"><img src="../public/icons/facebook.png" alt="Facebook"></a>
+                <a href="https://www.youtube.com" target="_blank" class="social-icon"><img src="../public/icons/youtube.png" alt="YouTube"></a>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home-section">Home</a></li>
+                    <li><a href="#about-site-section">Our Goals</a></li>
+                    <li><a href="#blogs-section">Blogs</a></li>
+                    <li><a href="#contact-section">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section copyright">
+                <p>© 2025 TravelBliss. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+        
+    
+    <script src="../public/script.js"></script>
+</body>
+</html>
