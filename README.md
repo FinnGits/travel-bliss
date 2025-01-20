@@ -24,9 +24,7 @@ Start the Live Server
 
 
 To start the live server, follow these steps:
-
-1. Open the Command Palette in VSCode by pressing Ctrl + Shift + P (Windows/Linux) or Cmd + Shift + P (Mac).
-2. Type "Live Server: Open With Live Server" and select the option.
-3. The live server will start, and you can view your project in the browser.
+In the bottom right hand corner, after installing the extension, it should show "Go-live", 
+hit that and the website will start up in your default browser automatically
 
 That's it! You should now be able to view and interact with your project.
