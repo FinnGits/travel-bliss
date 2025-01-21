@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Signup - TravelBliss</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Bree+Serif&family=Handlee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/login_signup.css">
+</head>
+<body>
+
+    <!-- Login/Signup Container -->
+    <section class="auth-section">
+        <div class="auth-container">
+            <!-- Login Form -->
+            <div class="auth-form" id="login-form">
+                <h1>Login</h1>
+                <form action="">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="Enter your email" required>
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password" required>
+                    <button type="submit">Login</button>
+                    <p>Don't have an account? <a href="#" onclick="switchForm('signup-form')">Sign up here</a></p>
+                </form>
+            </div>
+
+            <!-- Signup Form -->
+            <div class="auth-form hidden" id="signup-form">
+                <h1>Sign Up</h1>
+                <form action="">
+                    <label for="signup-name">Name</label>
+                    <input type="text" id="signup-name" placeholder="Enter your name" required>
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" placeholder="Enter your email" required>
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" placeholder="Create a password" required>
+                    <button type="submit">Sign Up</button>
+                    <p>Already have an account? <a href="#" onclick="switchForm('login-form')">Login here</a></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function switchForm(formId) {
+            document.getElementById('login-form').classList.add('hidden');
+            document.getElementById('signup-form').classList.add('hidden');
+            document.getElementById(formId).classList.remove('hidden');
+        }
+        // Event listener for the login form submission
+        document.getElementById('login-form').querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            // Get user input
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+            const loginMessage = document.createElement('p');
+
+            // Simple validation (replace with server-side validation in production)
+            if (email === "user@example.com" && password === "password123") {
+                // Store login status in localStorage
+                localStorage.setItem('loggedIn', 'true');
+                window.location.href = "home.html"; // Redirect to home page
+            } else {
+                loginMessage.textContent = 'Invalid credentials!';
+                document.getElementById('login-form').appendChild(loginMessage);
+            }
+        });
+
+        // Event listener for the signup form submission
+        document.getElementById('signup-form').querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('signup-name').value;
+            const email = document.getElementById('signup-email').value;
+            const password = document.getElementById('signup-password').value;
+            const signupMessage = document.createElement('p');
+            // Simple validation (replace with server-side validation in production)
+            if (name && email && password) {
+                // Simulate successful signup and redirect to login page
+                signupMessage.textContent = 'Signup successful! You can now log in.';
+                document.getElementById('signup-form').appendChild(signupMessage);
+                
+                // Optionally, redirect to login after a delay
+                setTimeout(() => {
+                    switchForm('login-form');
+                }, 2000);
+                
+                // Here you could also send the data to your backend for registration
+            } else {
+                signupMessage.textContent = 'Please fill all fields!';
+                document.getElementById('signup-form').appendChild(signupMessage);
+            }
+        });
+    </script>
+</body>
+</html>

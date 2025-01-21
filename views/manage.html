@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelBliss</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Bree+Serif&family=Handlee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/make_blog.css">
+</head>
+<body>
+    <!-- Redirect to login/signup if not already logged in -->
+    <script>
+        window.onload = function() {
+            if (!localStorage.getItem('loggedIn')) window.location.href = "login-signup.html";
+        };
+    </script>
+
+    <!-- Navbar -->
+    <header class="sticky">
+        <nav class="navbar">
+            <div class="nav-item" id="title">
+                <img src="../public/img/weblogo.jpg" alt="">
+                <div>Travel Bliss</div>
+            </div>
+            <div class="nav-item" id="links">
+                <ul>
+                    <li><a href="./index.html#home-section">Home</a></li>
+                    <li><a href="./index.html#about-site-section">Our Goals</a></li>
+                    <li><a href="./index.html#blogs-section">Blogs</a></li>
+                    <li><a href="#about-section">About</a></li>
+                    <li><a href="#contact-section">Contacts</a></li>
+                </ul>
+            </div>
+            <div class="nav-item" id="signup">
+                <button>Sign up</button>
+                <button>Login</button>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <!-- Manage Blogs -->
+    <section class="manage-blogs">
+        <div class="tabs">
+            <button class="tab-link active" onclick="openTab(event, 'make')">Make a New Blog</button>
+            <button class="tab-link" onclick="openTab(event, 'manage-your-blog')">Manage Blog</button>
+        </div>
+        <!-- Make Your Blog Tab -->
+        <div id="make" class="tab-content active">
+            <div id="make-your-blog">
+                <h1>Write Your Own Blog</h1>
+                <form id="blog-form" action="">
+                    <div id="main-heading" class="form-item">
+                        <label for="main-heading">Heading: </label>
+                        <input type="text" id="blog-heading" placeholder="A generic Heading" required>
+                    </div>
+                    <div id="main-image" class="form-item">
+                        <label for="main-image">Image: </label>
+                        <input type="file" id="blog-image" required>
+                    </div>
+                    <div id="main-body" class="form-item">
+                        <label>Body: </label>
+                        <div class="paras">
+                            <div id="paragraphs-container">
+                                <textarea placeholder="Paragraph 1" required></textarea>
+                            </div>
+                            <button type="button" id="add-paragraph-btn">Add Paragraph</button>
+                        </div>
+                    </div>
+                    <div id="main-meta-data" class="form-item">
+                        <label for="main-reading-time">Reading Time: </label>
+                        <input type="text" id="blog-reading-time" placeholder="3-5 Minutes" required>
+                    </div>
+                    <input type="submit" value="Submit Blog">
+                </form>
+            </div>
+        </div>
+        <!-- Manage Your Blog Tab -->
+        <!-- <div id="manage-your-blog" class="tab-content">
+            <h1>Manage Your Blog</h1>
+
+        </div> -->
+        <div id="manage-your-blog" class="tab-content">
+            <h1>Manage Your Blog</h1>
+            <div id="blog-list">
+                <!-- Blog Management Section -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Title</th>
+                            <th>Reading Time</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Placeholder: Dynamically add rows here -->
+                        <tr>
+                            <td>1</td>
+                            <td>My First Blog</td>
+                            <td>4 minutes</td>
+                            <td>
+                                <button class="view-btn">View</button>
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Another Blog</td>
+                            <td>5 minutes</td>
+                            <td>
+                                <button class="view-btn">View</button>
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>No blogs to display? Start by creating one in the "Make a New Blog" tab!</p>
+        </div>
+        
+    </section>
+
+    
+
+    <!-- About Section -->
+    <section id="about-section"> 
+        <div class="left">
+            <img src="../public/img/mine.jpg" alt="mine.jpg">
+        </div>
+        <div class="right">
+            <h1>Our Story</h1>
+            <p>Our mission is to inspire wanderlust through stories and guides, helping you explore new places with ease and excitement.</p>
+            <p>We believe travel is about connecting with people, discovering new experiences, and creating lasting memories.</p>
+            <p>Whether it's a bustling city or a serene hidden spot, we're here to share the best destinations and experiences with you.</p>
+            <p>Our team is a passionate group of travelers, always looking for new places to explore and stories to tell.</p>
+            <p>We want to make your journey smoother, sharing tips and insights that make each trip more meaningful.</p>
+            <p>Join us on our adventure and discover the world through our eyes, one story at a time.</p>
+            <button>Read More</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact-section">
+        <div class="background"></div>
+        <div class="overlay"></div>
+        <div class="content">
+            <div id="contact-left">
+                <form action="">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name..">
+                    <label for="email" >Email</label>
+                    <input type="email" id="email" name="email" placeholder="**example@gmail.com**" required>
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="**Write something..**" style="height:200px" required></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div id="contact-right">
+                <div><h1>Our Contacts</h1></div>
+                <div id="contact-given">
+                    <p class="contact-given-item"><strong>Email : </strong><a data-copy="example@gmail.com" onclick="copyToClipboard(event)">example@gmail.com</a></p>
+                    <p class="contact-given-item"><strong>Phone : </strong><a data-copy="0123456789" onclick="copyToClipboard(event)">0123456789</a></p>
+                    <p class="contact-given-item"><strong>Location : </strong><a data-copy="gReAtEsT cOlLeGe" onclick="copyToClipboard(event)">gReAtEsT cOlLeGe</a></p>
+                    <p class="contact-given-item"><strong>Thing : </strong><a data-copy="content" onclick="copyToClipboard(event)">content</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section social-media">
+                <h3>Follow Us</h3>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon"><img src="../public/icons/instagram.png" alt="Instagram"></a>
+                <a href="https://www.twitter.com" target="_blank" class="social-icon"><img src="../public/icons/twitter.png" alt="Twitter"></a>
+                <a href="https://www.facebook.com" target="_blank" class="social-icon"><img src="../public/icons/facebook.png" alt="Facebook"></a>
+                <a href="https://www.youtube.com" target="_blank" class="social-icon"><img src="../public/icons/youtube.png" alt="YouTube"></a>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html#home-section">Home</a></li>
+                    <li><a href="index.html#about-site-section">Our Goals</a></li>
+                    <li><a href="#blogs-section">Blogs</a></li>
+                    <li><a href="#contact-section">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section copyright">
+                <p>© 2025 TravelBliss. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="../public/script.js"></script>
+</body>
+</html>

@@ -7,11 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Bree+Serif&family=Handlee&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../public/make_blog.css">
+    <link rel="stylesheet" href="../public/blog_page.css">
 </head>
 <body>
-
-
     <!-- Navbar -->
     <header class="sticky">
         <nav class="navbar">
@@ -35,52 +33,8 @@
         </nav>
     </header>
 
-
-
-    <!-- Manage Blogs -->
-    <section class="manage-blogs">
-        <div class="tabs">
-            <button class="tab-link active" onclick="openTab(event, 'make')">Make a New Blog</button>
-            <button class="tab-link" onclick="openTab(event, 'manage-your-blog')">Manage Blog</button>
-        </div>
-        <!-- Make Your Blog Tab -->
-        <div id="make" class="tab-content active">
-            <div id="make-your-blog">
-                <h1>Write Your Own Blog</h1>
-                <form id="blog-form" action="">
-                    <div id="main-heading" class="form-item">
-                        <label for="main-heading">Heading: </label>
-                        <input type="text" id="blog-heading" placeholder="A generic Heading" required>
-                    </div>
-                    <div id="main-image" class="form-item">
-                        <label for="main-image">Image: </label>
-                        <input type="file" id="blog-image" required>
-                    </div>
-                    <div id="main-body" class="form-item">
-                        <label>Body: </label>
-                        <div class="paras">
-                            <div id="paragraphs-container">
-                                <textarea placeholder="Paragraph 1" required></textarea>
-                            </div>
-                            <button type="button" id="add-paragraph-btn">Add Paragraph</button>
-                        </div>
-                    </div>
-                    <div id="main-meta-data" class="form-item">
-                        <label for="main-reading-time">Reading Time: </label>
-                        <input type="text" id="blog-reading-time" placeholder="3-5 Minutes" required>
-                    </div>
-                    <input type="submit" value="Submit Blog">
-                </form>
-            </div>
-        </div>
-        <!-- Manage Your Blog Tab -->
-        <div id="manage-your-blog" class="tab-content">
-            <h1>Manage Your Blog</h1>
-            <p>This section will allow you to view and manage your existing blogs.</p>
-        </div>
-    </section>
-
     
+
 
     <!-- About Section -->
     <section id="about-section"> 

@@ -1,0 +1,101 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Handlee', sans-serif;
+    background: linear-gradient(to bottom, #001368, #001231);    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-family: 'Baloo Bhai 2', cursive;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #ffde59;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+/* Auth Section */
+.auth-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.auth-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 40px 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 400px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-form.hidden {
+    display: none;
+}
+
+.auth-form form {
+    width: 100%;
+}
+
+.auth-form label {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+}
+
+.auth-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.auth-form button:hover {
+    background-color: #ff5147;
+}
+
+.auth-form p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}

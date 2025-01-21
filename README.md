@@ -1,30 +1,27 @@
-# travel-bliss
-Getting Started
+### travel-bliss
 
+## Getting Started
 
-Clone the Repository
+1.  Clone the Repository 
+`git clone https://github.com/FinnGits/travel-bliss.git`
 
+2. Open the Project in VSCode.
 
-To get started, clone the repository using the following command:
+3. After opening in vs code, navigate to and open `views/index.html`.
 
+4. Make sure the `Live Server` extension is installed in VS Code.
 
-bash
-"git clone https://github.com/FinnGits/travel-bliss.git"
+5. On the bottom right hand side, there should be a button `Go Live`, hit that and wait until the website open in your default browser.
 
+## Status
 
-Open the Project in VSCode
+Currently the Front-End part is 90% done. Only one page is left and that will be made after the backend.
 
+# All Pages
 
-1. Open the cloned repository folder.
-2. Navigate to the views folder.
-3. Right-click in an empty space and select "Open with Code".
-4. This will open the project in VSCode.
+1. Home: index.html
+2. Blog-view: blog.html
+3. List-Blogs: all_blogs.html
+4. Login/Signup: login-signup.html
+5. Manage Blog view: manage.html
 
-Start the Live Server
-
-
-To start the live server, follow these steps:
-In the bottom right hand corner, after installing the extension, it should show "Go-live", 
-hit that and the website will start up in your default browser automatically
-
-That's it! You should now be able to view and interact with your project.

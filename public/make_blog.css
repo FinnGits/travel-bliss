@@ -185,25 +185,25 @@ section{
     border-radius: 5px;
     font-family: 'Handlee', serif;
 }
-
-#make-your-blog .form-item textarea {
+#make-your-blog .paras{
     flex: 2;
-    height: 300px; /* Set textarea height to 300px */
+    margin: 0px;
+}
+#make-your-blog .form-item textarea {
+    height: 150px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-family: 'Handlee', serif;
-    width: 100%; /* Matches the width of other inputs */
-    box-sizing: border-box; /* Ensure padding doesn't affect total width */
+    width: 100%;
+    box-sizing: border-box;
 }
-
 #paragraphs-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-top: 10px;
 }
-
 #make-your-blog #add-paragraph-btn {
     margin-top: 10px;
     padding: 5px 10px;
@@ -213,15 +213,13 @@ section{
     border-radius: 12px;
     cursor: pointer;
     transition: 0.5s;
-    align-self: flex-start; /* Align button to the left */
+    align-self: flex-start;
 }
-
 #make-your-blog #add-paragraph-btn:hover {
     background-color: bisque;
     color: maroon;
     transform: scale(1.1);
 }
-
 #make-your-blog input[type="submit"] {
     width: auto;
     padding: 10px 20px;
@@ -235,7 +233,6 @@ section{
     align-self: center;
     transition: 0.5s;
 }
-
 #make-your-blog input[type="submit"]:hover {
     background-color: bisque;
     color: maroon;
@@ -247,6 +244,75 @@ section{
     padding: 20px;
     text-align: center;
 }
+#manage-your-blog h1 {
+    padding: 30px 0px;
+    font-size: 2rem;
+}/* Manage Blog Tab - Table Styling */
+#manage-your-blog table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0px;
+    font-family: 'Handlee', serif;
+}
+
+#manage-your-blog th, 
+#manage-your-blog td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+}
+
+#manage-your-blog th {
+    background-color: var(--nav-bg-col);
+    color: white;
+    font-size: 1.1rem;
+}
+
+#manage-your-blog tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#manage-your-blog tr:hover {
+    background-color: #f1f1f1;
+}
+
+#manage-your-blog .edit-btn, 
+#manage-your-blog .view-btn, 
+#manage-your-blog .delete-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#manage-your-blog .edit-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#manage-your-blog .edit-btn:hover {
+    background-color: #45a049;
+}
+#manage-your-blog .view-btn {
+    background-color: #514caf;
+    color: white;
+}
+
+#manage-your-blog .view-btn:hover {
+    background-color: #4566a0;
+}
+
+#manage-your-blog .delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+#manage-your-blog .delete-btn:hover {
+    background-color: #d32f2f;
+}
+
 
 
 
