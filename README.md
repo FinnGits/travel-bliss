@@ -15,7 +15,8 @@
 
 ## Status
 
-Currently the Front-End part is 90% done. Only one page is left and that will be made after the backend.
+Site is Finished!
+The Project has reached it's End.
 
 # All Pages
 
