@@ -101,7 +101,7 @@ section{
     gap: 5px;
 }
 #signup button{
-    width: 100px;
+    padding: 30px;
     height: 80%;
     color: white;
     background-color: var(--nav-bg-col);
@@ -110,7 +110,6 @@ section{
     font-family: "Handlee", serif;
     font-size: large;
 }
-
 
 
 
@@ -247,36 +246,26 @@ section{
 #manage-your-blog h1 {
     padding: 30px 0px;
     font-size: 2rem;
-}/* Manage Blog Tab - Table Styling */
+}
 #manage-your-blog table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0px;
     font-family: 'Handlee', serif;
 }
-
 #manage-your-blog th, 
 #manage-your-blog td {
     text-align: left;
     padding: 12px;
     border-bottom: 1px solid #ccc;
 }
-
 #manage-your-blog th {
     background-color: var(--nav-bg-col);
     color: white;
     font-size: 1.1rem;
 }
-
-#manage-your-blog tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-#manage-your-blog tr:hover {
-    background-color: #f1f1f1;
-}
-
-#manage-your-blog .edit-btn, 
+#manage-your-blog tr:nth-child(even) {background-color: #f9f9f9;}
+#manage-your-blog tr:hover {background-color: #f1f1f1;}
 #manage-your-blog .view-btn, 
 #manage-your-blog .delete-btn {
     padding: 8px 12px;
@@ -286,32 +275,16 @@ section{
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
-#manage-your-blog .edit-btn {
-    background-color: #4CAF50;
-    color: white;
-}
-
-#manage-your-blog .edit-btn:hover {
-    background-color: #45a049;
-}
 #manage-your-blog .view-btn {
     background-color: #514caf;
     color: white;
 }
-
-#manage-your-blog .view-btn:hover {
-    background-color: #4566a0;
-}
-
+#manage-your-blog .view-btn:hover {background-color: #4566a0;}
 #manage-your-blog .delete-btn {
     background-color: #f44336;
     color: white;
 }
-
-#manage-your-blog .delete-btn:hover {
-    background-color: #d32f2f;
-}
+#manage-your-blog .delete-btn:hover {background-color: #d32f2f;}
 
 
 

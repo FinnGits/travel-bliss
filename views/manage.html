@@ -11,11 +11,11 @@
 </head>
 <body>
     <!-- Redirect to login/signup if not already logged in -->
-    <script>
+    <!-- <script>
         window.onload = function() {
             if (!localStorage.getItem('loggedIn')) window.location.href = "login-signup.html";
         };
-    </script>
+    </script> -->
 
     <!-- Navbar -->
     <header class="sticky">
@@ -34,8 +34,9 @@
                 </ul>
             </div>
             <div class="nav-item" id="signup">
-                <button>Sign up</button>
-                <button>Login</button>
+                <a href="login-signup.html">
+                    <button>Sign up / login</button>
+                </a>
             </div>
         </nav>
     </header>
@@ -78,11 +79,8 @@
                 </form>
             </div>
         </div>
-        <!-- Manage Your Blog Tab -->
-        <!-- <div id="manage-your-blog" class="tab-content">
-            <h1>Manage Your Blog</h1>
 
-        </div> -->
+        <!-- Manage Your Blog Tab -->
         <div id="manage-your-blog" class="tab-content">
             <h1>Manage Your Blog</h1>
             <div id="blog-list">
@@ -97,24 +95,75 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- Placeholder: Dynamically add rows here -->
                         <tr>
                             <td>1</td>
-                            <td>My First Blog</td>
-                            <td>4 minutes</td>
+                            <td>Tokyo Unveiled: A Journey Through Japan’s Electric Heart</td>
+                            <td>7 minutes</td>
                             <td>
-                                <button class="view-btn">View</button>
-                                <button class="edit-btn">Edit</button>
+                                <a href="../blogs/1tokyo.html"><button class="view-btn">View</button></a>
                                 <button class="delete-btn">Delete</button>
                             </td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>Another Blog</td>
+                            <td>Santorini Sunsets: Greece’s Most Romantic Escape</td>
                             <td>5 minutes</td>
                             <td>
-                                <button class="view-btn">View</button>
-                                <button class="edit-btn">Edit</button>
+                                <a href="../blogs/2santorini.html"><button class="view-btn">View</button></a>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Patagonia Untamed: Trekking Through Argentina & Chile</td>
+                            <td>6 minutes</td>
+                            <td>
+                                <a href="../blogs/3patagonia.html"><button class="view-btn">View</button></a>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Marrakech Magic: Markets, Mosques & Mystique</td>
+                            <td>6 minutes</td>
+                            <td>
+                                <a href="../blogs/4marrakech.html"><button class="view-btn">View</button></a>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>The Icelandic Saga: Chasing Waterfalls & Northern Lights</td>
+                            <td>8 minutes</td>
+                            <td>
+                                <a href="../blogs/5iceland.html"><button class="view-btn">View</button></a>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Bali Bliss: Temples, Surf, and Spirituality</td>
+                            <td>4 minutes</td>
+                            <td>
+                                <a href="../blogs/6bali.html"><button class="view-btn">View</button></a>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Road Trip USA: The Ultimate Route 66 Experience</td>
+                            <td>5 minutes</td>
+                            <td>
+                                <a href="../blogs/7usa.html"><button class="view-btn">View</button></a>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Serengeti Safari: Africa’s Wildest Adventure</td>
+                            <td>7 minutes</td>
+                            <td>
+                                <a href="../blogs/8serengeti.html"><button class="view-btn">View</button></a>
                                 <button class="delete-btn">Delete</button>
                             </td>
                         </tr>
@@ -164,10 +213,9 @@
             <div id="contact-right">
                 <div><h1>Our Contacts</h1></div>
                 <div id="contact-given">
-                    <p class="contact-given-item"><strong>Email : </strong><a data-copy="example@gmail.com" onclick="copyToClipboard(event)">example@gmail.com</a></p>
-                    <p class="contact-given-item"><strong>Phone : </strong><a data-copy="0123456789" onclick="copyToClipboard(event)">0123456789</a></p>
-                    <p class="contact-given-item"><strong>Location : </strong><a data-copy="gReAtEsT cOlLeGe" onclick="copyToClipboard(event)">gReAtEsT cOlLeGe</a></p>
-                    <p class="contact-given-item"><strong>Thing : </strong><a data-copy="content" onclick="copyToClipboard(event)">content</a></p>
+                    <p class="contact-given-item"><strong>Email : </strong><a data-copy="travelbliss@gmail.com" onclick="copyToClipboard(event)">example@gmail.com</a></p>
+                    <p class="contact-given-item"><strong>Phone : </strong><a data-copy="9977553311" onclick="copyToClipboard(event)">0123456789</a></p>
+                    <p class="contact-given-item"><strong>Location : </strong><a data-copy="New Delhi, India" onclick="copyToClipboard(event)">gReAtEsT cOlLeGe</a></p>
                 </div>
             </div>
         </div>
@@ -186,12 +234,10 @@
             <div class="footer-section quick-links">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="index.html#home-section">Home</a></li>
-                    <li><a href="index.html#about-site-section">Our Goals</a></li>
-                    <li><a href="#blogs-section">Blogs</a></li>
+                    <li><a href="./index.html#home-section">Home</a></li>
+                    <li><a href="./index.html#about-site-section">Our Goals</a></li>
+                    <li><a href="./index.html#blogs-section">Blogs</a></li>
                     <li><a href="#contact-section">Contact</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
                 </ul>
             </div>
             <div class="footer-section copyright">

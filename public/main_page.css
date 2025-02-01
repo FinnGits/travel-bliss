@@ -101,7 +101,7 @@ section{
     gap: 5px;
 }
 #signup button{
-    width: 100px;
+    padding: 30px;
     height: 80%;
     color: white;
     background-color: var(--nav-bg-col);
