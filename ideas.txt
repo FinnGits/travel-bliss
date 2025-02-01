@@ -1,98 +1,43 @@
-
-/Home
-
-1. Navbar:
-  - Sticky at the top
-  - Links:
-    - Home ("/")
-    - About ("/about")
-    - Blogs ("/blogs")
-    - Search ("/search")
-    - Contact ("/contact")
-  - Optional: Brand logo on the left
-  - Responsive:
-    - On small screens, collapses into hamburger menu
-
-2. Welcome Section (Hero Section):
-  - Full-screen background image (or gradient)
-  - Title: "Welcome to [Your Blog Name]!"
-  - Subtitle: "Your journey to the world's wonders starts here."
-
-3. About the Site Section:
-  - Title: "About the Site"
-  - Short Description: "Discover amazing travel destinations, tips, and experiences."
-  - Optional: Small image/icon illustrating the theme (e.g., a suitcase, globe, etc.)
-
-4. Actions Section (Key Actions):
-  - Grid or flexbox layout
-  - Action Cards (3 cards with actions):
-    - Card 1: "View Blogs"
-      - When clicked, redirects to "/blogs" page
-      - The "/blogs" page displays:
-        - A list/grid of all blogs
-        - A search bar to search blogs by title, tags, or content
-        - Filters (e.g., by category, region, or blog type)
-        - Sorting options (e.g., by date, popularity, or alphabetical order)
-        
-    - Card 2: "Manage Your Blogs" (For Blog Creators)
-      - When clicked, redirects to "/manage-blogs" page
-      - The "/manage-blogs" page allows creators to:
-        - Create new blogs (form for title, content, images, tags, etc.)
-        - Edit existing blogs (list of existing blogs with edit buttons)
-        - Delete blogs (optional, with confirmation)
-
-    - Card 3: "Get Inspired" (Random Blog)
-      - When clicked, redirects to a random blog page (e.g., "/blog/:random_id")
-      - Randomly selects a blog from the database and displays it
-
-5. About Section (More Details):
-  - Title: "Our Story" or "More About Us"
-  - Description: "Our mission is to inspire wanderlust through stories and guides."
-  - Optional: Image gallery or carousel of travel photos
-  - Optional: Fun facts or stats (e.g., "100+ destinations explored")
-
-6. Contact Section:
-  - Title: "Contact Us"
-  - ContactForm:
-    - Name input field
-    - Email input field
-    - Message text area
-    - Submit button: "Send Message"
-    - On form submission, send the data to a backend or email service
-  - Alternative Contact Methods:
-    - Email: "contact@yourblog.com"
-    - Phone: "+1 234 567 890"
-  - Optional: Display map (e.g., embedded Google Maps)
-
-7. Footer:
-  - Social Media Links:
-    - Instagram, Twitter, Facebook, YouTube (links/icons)
-  - Copyright Notice: "© 2025 Travel Blog. All rights reserved."
-  - Links to Privacy Policy and Terms of Service
-  - Optional: Sticky footer on mobile for easier access
-
-8. Optional Enhancements:
-  - Scroll animations: Show sections with a fade-in or slide-up effect as the user scrolls
-  - "Back to Top" button:
-    - Button appears when the user scrolls down
-    - On click, scrolls the page to the top
-  - Sticky Footer:
-    - Keep footer visible at all times on mobile for easy social media access
+The Website is only designed for desktop view
+this is a proof of concept and adding big features like a proper backend is one of the future scopes
 
 
 
+Home Page: (index.html)
+  1) sticky Navbar
+  2) main hero section to attract attention and welcome the user
+  3) the goals of this website(why this project exists)
+  4) main section (Blogs):
+      -> view all blogs (list of blogs)
+      -> manage / create blogs
+      -> pick a random blog and serve it
+  5) about the people who made the website
+  6) a contact sections                                      (doesn't do anything, only for looks)
+  7) footer
 
 
+Login/SignUp: (login-signup)                                 (doesn't do anything, only for looks)
+  1) can login
+  2) can make new account then login
 
 
+List of All Blogs: (all_blogs.html)
+  1) just a list of all blogs, you can click(view button) any to open that blog
+  2) about, contact, footer (same as before)
 
-/blogs (all blogs list)
 
-/Blog (one single expanded blog)
+Manage: (manage.html)
+  1) two tabs:
+      -> make a blog section, can add as many paragraphs as wanted        (doesn't do anything, only for looks)
+      -> list of all blogs, same as all_blogs.html but with an extra delete button that doesn't do anything
+  2) about, contact, footer (same as before)
 
-/manage-blogs (create, edit your own blogs after signing up)
 
-about.html
-signup.html
-login.html
-tos.html
+Blog Template:
+  1) main heading
+  2) main image
+  3) meta data (publisher, date, reading time)
+  4) main content
+
+  5) about, contact, footer (same as before)
+  
